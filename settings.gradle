@@ -1,0 +1,3 @@
+rootProject.name = "New Project"
+include ':app'
+include ':projectmagazine'
