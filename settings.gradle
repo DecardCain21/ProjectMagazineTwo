@@ -1,3 +1,4 @@
 rootProject.name = "New Project"
 include ':app'
 include ':projectmagazine'
+include ':P0171_DynamicLayout2'
