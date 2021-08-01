@@ -2,3 +2,7 @@ rootProject.name = "New Project"
 include ':app'
 include ':projectmagazine'
 include ':P0171_DynamicLayout2'
+include ':P0181_DynamicLayout3'
+include ':P0191_SimpleCalculator'
+include ':P0201_SimpleAnimation'
+include ':P0411_LayoutInflaterList'
