@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
     Button pay;
     Button alternative;
 
+    boolean isEnabled;
+
     LinearLayout lloption;
     LinearLayout llpagetwo;
     //Меню
@@ -78,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         pay = (Button) findViewById(R.id.pay);
         alternative = (Button) findViewById(R.id.alternative);
         ImageView logo = (ImageView) findViewById(R.id.imageView7);
-        LinearLayout llpagetwo = (LinearLayout) findViewById(R.id.llpagetwo);
+
         //Присваиваю данным кнопкам обработчики
         brdruid.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -103,6 +105,8 @@ public class MainActivity extends AppCompatActivity {
                 tvPosition.setText(initMagazine(0).getSpecialization());
                 tvSalary.setText(String.valueOf(initMagazine(0).getPrice()));
                 llpagetwo.addView(item);
+
+
 
             }
         });
@@ -136,6 +140,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(v.getContext(), "110$", Toast.LENGTH_SHORT).show();
                 logo.setImageDrawable(getDrawable(R.drawable.pwar));
+                tvName.setText(initMagazine(2).getName());
+                tvPosition.setText(initMagazine(2).getSpecialization());
+                tvSalary.setText(String.valueOf(initMagazine(2).getPrice()));
+                llpagetwo.addView(item);
+
             }
         });
         bbmhunt.setOnClickListener(new View.OnClickListener() {
@@ -177,9 +186,10 @@ public class MainActivity extends AppCompatActivity {
 
     public Wowclass initMagazine(int i) {
         List<Wowclass> listwowclass = new ArrayList<Wowclass>();
-        listwowclass.add((new Hunter("Hunter","MM",123)));
-        listwowclass.add((new Hunter("Hunter","MM",85)));
-        listwowclass.add((new Hunter("Warrior","Pwar",110)));
+        listwowclass.add((new Hunter("Hunter", "MM", 123)));
+        listwowclass.add((new Hunter("Hunter", "MM", 85)));
+        listwowclass.add((new Hunter("Warrior", "Pwar", 110)));
+        //Адаптер,сделать адаптер,сетить список,обновлять UI
         return listwowclass.get(i);
     }
 

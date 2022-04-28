@@ -15,8 +15,17 @@
             <option value="$PROJECT_DIR$/P0191_SimpleCalculator" />
             <option value="$PROJECT_DIR$/P0201_SimpleAnimation" />
             <option value="$PROJECT_DIR$/P0411_LayoutInflaterList" />
+            <option value="$PROJECT_DIR$/animation" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/operators" />
+            <option value="$PROJECT_DIR$/p0211twoactivity" />
+            <option value="$PROJECT_DIR$/p0231_oneactivitystate" />
             <option value="$PROJECT_DIR$/projectmagazine" />
+            <option value="$PROJECT_DIR$/testconstraint" />
+            <option value="$PROJECT_DIR$/testcoordinatorlayout" />
+            <option value="$PROJECT_DIR$/testfragments" />
+            <option value="$PROJECT_DIR$/testgriditem" />
+            <option value="$PROJECT_DIR$/textrecycleview" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

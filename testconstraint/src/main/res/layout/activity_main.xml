@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_main"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:text="Test ConstraintLayouts"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintLeft_toRightOf="@id/youtubeView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        app:layout_goneMarginStart="50dp" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:text="Random name youtube channel 4234 3245 63 6546 456 4564 6456 456"
+        app:layout_constraintBottom_toBottomOf="@id/imageView1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/imageView1"
+        app:layout_constraintTop_toBottomOf="@id/youtubeView" />
+
+    <ImageView
+        android:id="@+id/youtubeView"
+        android:layout_width="77dp"
+        android:layout_height="68dp"
+        android:scaleType="center"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/youtube" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="@id/youtubeView"
+        app:layout_constraintTop_toBottomOf="@id/youtubeView"
+        app:srcCompat="?android:attr/galleryItemBackground" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="@id/imageView1"
+        app:layout_constraintTop_toBottomOf="@id/imageView1"
+        app:srcCompat="?android:attr/galleryItemBackground" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintLeft_toLeftOf="@id/imageView2"
+        app:layout_constraintTop_toBottomOf="@id/imageView2"
+        app:srcCompat="?android:attr/galleryItemBackground" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:visibility="visible"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintLeft_toLeftOf="@id/imageView3"
+        app:layout_constraintTop_toBottomOf="@id/imageView3"
+        app:srcCompat="?android:attr/galleryItemBackground" />
+
+    <TextView
+        android:id="@+id/tvDirector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Director:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView3"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="354dp" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="10dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvDirector"
+        app:layout_constraintStart_toEndOf="@id/tvDirector"
+        app:layout_constraintTop_toBottomOf="@id/imageView4"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="354dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/title_poster_bottom_barrier"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvDirector,imageView4" />
+
+    <TextView
+        android:id="@+id/randomText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To help reverse the devastating spread of Covid-19 in India, VB has since utilized SHIB in the"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_poster_bottom_barrier"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="472dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flowallmodel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:constraint_referenced_ids="modelone,modeltwo,modelthree,modelfour,modelfive,modelsix"
+        app:flow_horizontalBias="0.5"
+        app:flow_horizontalGap="20dp"
+        app:flow_horizontalStyle="spread"
+        app:flow_verticalStyle="spread"
+        app:flow_wrapMode="chain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/randomText" />
+
+    <TextView
+        android:id="@+id/modelone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[modelone]" />
+
+    <TextView
+        android:id="@+id/modeltwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[modeltwo]" />
+
+    <TextView
+        android:id="@+id/modelthree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[modelthree]" />
+
+    <TextView
+        android:id="@+id/modelfour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[modelfour]" />
+
+    <TextView
+        android:id="@+id/modelfive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[modelfive]" />
+
+    <TextView
+        android:id="@+id/modelsix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[modelsix]" />
+
+    <Button
+        android:id="@+id/buttonone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="One"
+        app:layout_constraintEnd_toStartOf="@id/buttontwo"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flowallmodel"
+        app:layout_constraintVertical_chainStyle="spread"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="570dp" />
+
+    <Button
+        android:id="@+id/buttontwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Two"
+        app:layout_constraintEnd_toStartOf="@id/buttonthree"
+        app:layout_constraintStart_toEndOf="@id/buttonone"
+        app:layout_constraintTop_toBottomOf="@id/flowallmodel"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="570dp" />
+
+    <Button
+        android:id="@+id/buttonthree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="three"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttontwo"
+        app:layout_constraintTop_toBottomOf="@id/flowallmodel"
+        tools:layout_editor_absoluteX="287dp"
+        tools:layout_editor_absoluteY="570dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinetwo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
